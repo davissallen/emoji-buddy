@@ -1,10 +1,6 @@
+package io.michaelcruz.b2_httpd.core
+
 import com.fasterxml.jackson.annotation.JsonProperty
-import io.dropwizard.Configuration
+import org.hibernate.validator.constraints.Length
 
-public class B2HttpdConfiguration() : Configuration() {
-    @JsonProperty("template")
-    public var template: String=""
-
-    @JsonProperty("defaultName")
-    public var defaultName: String="Stranger"
-}
+data class Saying(@JsonProperty val id: Long, @JsonProperty @Length(max = 3) val content: String)
