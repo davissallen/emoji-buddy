@@ -19,6 +19,9 @@ class B2HttpdResource(val template: String, val defaultName: String) {
     @GET
     fun sayHello(@QueryParam("name") name: Optional<String>): Saying {
         val value = java.lang.String.format(template, name.or(defaultName))
-        return Saying(counter.incrementAndGet(), value)
+        return Saying(
+                id = counter.incrementAndGet(),
+                content = value
+        )
     }
 }

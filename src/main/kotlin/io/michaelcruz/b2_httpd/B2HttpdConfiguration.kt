@@ -5,7 +5,7 @@ import io.dropwizard.Configuration
 
 public class B2HttpdConfiguration() : Configuration() {
     @JsonProperty("template")
-    public var template: String=""
+    public var template: String="%s"
 
     @JsonProperty("defaultName")
     public var defaultName: String="Stranger"
