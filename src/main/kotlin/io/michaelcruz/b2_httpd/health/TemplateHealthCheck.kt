@@ -1,4 +1,4 @@
-package main.kotlin.io.michaelcruz.b2_httpd.health
+package io.michaelcruz.b2_httpd.health
 
 import com.codahale.metrics.health.HealthCheck
 import com.codahale.metrics.health.HealthCheck.Result

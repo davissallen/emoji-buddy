@@ -1,9 +1,9 @@
-package main.kotlin.io.michaelcruz.b2_httpd
+package io.michaelcruz.b2_httpd
 
 import io.dropwizard.Application
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
-import io.michaelcruz.b2_httpd.resources.HelloWorldResource
+import io.michaelcruz.b2_httpd.resources.B2HttpdResource
 import io.michaelcruz.b2_httpd.health.TemplateHealthCheck
 
 class B2Httpd() : Application<B2HttpdConfiguration>() {

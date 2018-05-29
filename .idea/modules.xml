@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/b2-httpd.iml" filepath="$PROJECT_DIR$/b2-httpd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client_main.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client_test.iml" group="client" />
     </modules>
   </component>
 </project>

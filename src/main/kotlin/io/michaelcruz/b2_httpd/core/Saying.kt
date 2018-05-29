@@ -1,6 +1,6 @@
-package main.kotlin.io.michaelcruz.b2_httpd.core
+package io.michaelcruz.b2_httpd.core
 
-fun main(args: Array<String>) {
-    var str: String = "Hello, world."
-    println(str)
-}
+import com.fasterxml.jackson.annotation.JsonProperty
+import org.hibernate.validator.constraints.Length
+
+data class Saying(@JsonProperty val id: Long, @JsonProperty @Length(max = 3) val content: String)
