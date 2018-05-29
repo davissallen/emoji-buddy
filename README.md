@@ -10,3 +10,5 @@ All contructive criticism is welcomed :)
 * Kotlin https://kotlinlang.org/
 * Dropwizard https://www.dropwizard.io/1.3.2/docs/
 * Gradle https://gradle.org/
+
+#####[References](https://github.com/doomspork/kotlin-dropwizard)
