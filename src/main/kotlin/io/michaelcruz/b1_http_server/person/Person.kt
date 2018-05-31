@@ -1,4 +1,4 @@
-package io.michaelcruz.b1_http_server.oo
+package io.michaelcruz.b1_http_server.person
 
 class Person(val name: String, var age: Int) {
 // by adding val and var to the parameters of the class we don't need to initialize
