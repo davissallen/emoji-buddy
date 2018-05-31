@@ -41,4 +41,6 @@ Temporary Items
 
 target/
 
-.gradle
+.gradle/
+build/
+

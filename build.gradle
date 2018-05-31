@@ -14,7 +14,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin'
 apply plugin: 'application'
-mainClassName = "io.michaelcruz.b2_httpd.B2Httpd"
+mainClassName = "io.michaelcruz.b1_http_server.B1HttpServer"
 
 repositories {
     mavenCentral()
