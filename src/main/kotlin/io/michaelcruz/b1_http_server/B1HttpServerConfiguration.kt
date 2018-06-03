@@ -5,8 +5,8 @@ import io.dropwizard.Configuration
 
 class B1HttpServerConfiguration() : Configuration() {
     @JsonProperty("template")
-    var template: String="%s"
+    var template: String= "unknown"
 
     @JsonProperty("defaultName")
-    var defaultName: String="Stranger"
+    var defaultName: String= "unknown"
 }
