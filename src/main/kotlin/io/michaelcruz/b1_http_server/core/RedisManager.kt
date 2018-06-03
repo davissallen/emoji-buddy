@@ -7,9 +7,12 @@ class RedisManager {
     val redis: Jedis = Jedis()
 
     // build random string generator
-    fun setUrl(url: String) {
-        redis.hset("short.654321", "url", url)
-        redis.hset("short.654321", "date", Date().toString())
+    fun setUrl(url: String) : String {
+        val randomString: String = "654321"
+        val shortUrl: String = "short." + randomString
+        redis.hset(shortUrl, "url", url)
+        redis.hset(shortUrl, "date", Date().toString())
+        return randomString
     }
     fun getUrl(shortUrl: String) {
         redis.hgetAll(shortUrl)
