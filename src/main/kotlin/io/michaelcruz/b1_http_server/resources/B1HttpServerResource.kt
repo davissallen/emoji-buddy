@@ -35,7 +35,7 @@ class B1HttpServerResource(val template: String, val defaultName: String) {
 
     @POST
     @Path("/fetchurl")
-    fun fetchUrl(@QueryParam("url") url: String): Response {
+    fun fetchUrl(@QueryParam("url") url: Optional<String>): Response {
 //        val value = java.lang.String.format(template, url.or(defaultName))
         val randomString = redis.setUrl(url.get())
 
