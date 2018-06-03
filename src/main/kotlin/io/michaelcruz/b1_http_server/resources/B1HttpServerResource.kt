@@ -9,6 +9,7 @@ import javax.ws.rs.GET
 import com.google.common.base.Optional
 import javax.ws.rs.QueryParam
 import io.michaelcruz.b1_http_server.core.Saying
+import redis.clients.jedis.Jedis
 
 @Path("/hello-world")
 @Produces(MediaType.APPLICATION_JSON)
@@ -18,6 +19,10 @@ class B1HttpServerResource(val template: String, val defaultName: String) {
     @Timed
     @GET
     fun sayHello(@QueryParam("name") name: Optional<String>): Saying {
+        val jedis = Jedis()
+        println("Look at the hget...")
+        println(jedis.hgetAll("short.788787"))
+        jedis.close()
         val value = java.lang.String.format(template, name.or(defaultName))
         return Saying(
                 id = counter.incrementAndGet(),
