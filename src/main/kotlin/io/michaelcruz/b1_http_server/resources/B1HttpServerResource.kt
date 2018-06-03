@@ -1,13 +1,15 @@
 package io.michaelcruz.b1_http_server.resources
 
+import javax.ws.rs.Path
+import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 import java.util.concurrent.atomic.AtomicLong
-import com.codahale.metrics.annotation.Timed
 import com.google.common.base.Optional
-import io.dropwizard.jersey.PATCH
 import io.michaelcruz.b1_http_server.core.RedisManager
 import io.michaelcruz.b1_http_server.core.Response
+import javax.ws.rs.GET
 import javax.ws.rs.POST
+import javax.ws.rs.QueryParam
 import javax.ws.rs.*
 
 @Path("/")
@@ -16,22 +18,24 @@ class B1HttpServerResource(val template: String, val defaultName: String) {
     var counter = AtomicLong()
     val redis = RedisManager()
 
-    @Timed
-    @Path("/{short}")
-    @PATCH
-    fun fetchUrl(@PathParam("short") short: String): Response {
 
+    @GET
+    @Path("/{short}")
+    fun fetchUrl(@PathParam("short") short: String): Response {
+        val redirectUrl = redis.getUrl(short).toString()
+        // redirect here
         return Response(
                 id = counter.incrementAndGet(),
-                url = short + "you did the thing"
+                url = redirectUrl
         )
     }
 
-    @Timed
-    @Path("/fetchurl")
+
     @POST
+    @Path("/fetchurl")
     fun fetchUrl(@QueryParam("url") url: Optional<String>): Response {
-        val randomString = redis.setUrl(url.toString())
+        val value = java.lang.String.format(template, url.or(defaultName))
+        val randomString = redis.setUrl(value.toString())
 
         return Response(
                 id = counter.incrementAndGet(),
