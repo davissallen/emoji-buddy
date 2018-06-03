@@ -14,7 +14,7 @@ class RedisManager {
 
     // build random string generator
     fun setUrl(url: String) : String? {
-        val randomString: String = "123"
+        val randomString: String = EmojiGen().getEmojis()
         val shortUrl: String = "short." + randomString
         redis.hset(shortUrl, "url", url)
         redis.hset(shortUrl, "date", Date().toString())
