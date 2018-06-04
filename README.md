@@ -1,17 +1,19 @@
 # b1-http-server
 
-Hello. This is just the start of my exploration into Kotlin. I'd like to see what it is like using this language as a
-webserver. The utility of this server is currently not defined and the resources it will serve are yet to be determined.
+> Urls are long and boring. Why not spice 🌶️ 🌶️ them up a bit?
+
+Here is a url shortner that makes your contracted urls fun.
 
 
-The first thought as a project idea is a url shortener.
+### Next Steps
 
-All contructive criticism is welcomed :)
+1. get my hands 🖐️🖐️ on a complete list 📔 of emoji.
+2. Handle data 📊 collisions 💥💥.
+3. 
 
 #### Technologies Used
 
 * Kotlin https://kotlinlang.org/
+* Redis https://redis.io/
 * Dropwizard https://www.dropwizard.io/1.3.2/docs/
 * Gradle https://gradle.org/
-
-##### [References](https://github.com/doomspork/kotlin-dropwizard)
