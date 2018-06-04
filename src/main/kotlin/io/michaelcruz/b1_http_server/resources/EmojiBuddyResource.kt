@@ -18,7 +18,7 @@ import javax.ws.rs.core.UriBuilder
 
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
-class B1HttpServerResource(val template: String, val defaultName: String) {
+class EmojiBuddyResource(val template: String, val defaultName: String) {
     var counter = AtomicLong()
     val redis = RedisManager()
 

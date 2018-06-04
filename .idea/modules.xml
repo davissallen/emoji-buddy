@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/b1-http-server.iml" filepath="$PROJECT_DIR$/b1-http-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b1-http-server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/b1-http-server_main.iml" group="b1-http-server" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b1-http-server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/b1-http-server_test.iml" group="b1-http-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/emoji-buddy.iml" filepath="$PROJECT_DIR$/.idea/modules/emoji-buddy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/emoji-buddy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/emoji-buddy_main.iml" group="emoji-buddy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/emoji-buddy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/emoji-buddy_test.iml" group="emoji-buddy" />
     </modules>
   </component>
 </project>
