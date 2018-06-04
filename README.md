@@ -7,9 +7,10 @@ Here is a url shortner that makes your contracted urls fun.
 
 ### Next Steps
 
-1. Get my hands 🖐️🖐️ on a complete list 📔 of emoji.
-2. Handle data 📊 collisions 💥💥.
-3. 
+~~1. Get my hands 🖐️🖐️ on a complete list 📔 of emoji.~~
+~~2. Build a store 🏪 based on said list. ☝🏽~~
+3. Handle data 📊 collisions 💥💥.
+4. Work  👩🏽‍💻 on html form to create url.
 
 #### Technologies Used
 
