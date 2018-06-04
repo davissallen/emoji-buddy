@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class Nature private constructor(private val text: String) {
+enum class NatureEmoji private constructor(public val text: String) {
 
     //Row#: 1
     DOG_FACE("🐶"), //https://www.emojibase.com/emoji/1f436/dogface

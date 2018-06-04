@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class Flags private constructor(private val text: String) {
+enum class FlagsEmoji private constructor(public val text: String) {
 
     //Row#: 1
     AFGHANISTAN("🇦🇫"), //https://www.emojibase.com/emoji/1f1e6-1f1eb/flagforafghanistan

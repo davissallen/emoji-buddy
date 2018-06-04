@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class People private constructor(private val text: String) {
+enum class PeopleEmoji private constructor(public val text: String) {
 
     //Row#: 1
     GRINNING_FACE("😀"), //https://www.emojibase.com/emoji/1f600/grinningface

@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class Symbols private constructor(private val text: String) {
+enum class SymbolsEmoji private constructor(public val text: String) {
 
     //Row#: 1
     HEAVY_BLACK_HEART("❤"), //http://www.emojibase.com/emoji/2764/heavyblackheart

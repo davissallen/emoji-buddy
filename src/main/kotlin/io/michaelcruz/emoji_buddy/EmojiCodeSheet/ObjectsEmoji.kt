@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class Objects private constructor(private val text: String) {
+enum class ObjectsEmoji private constructor(public val text: String) {
 
     //Row#: 1
     WATCH("⌚"), //https://www.emojibase.com/emoji/231a/watch

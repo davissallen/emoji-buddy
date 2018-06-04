@@ -4,7 +4,7 @@ package io.michaelcruz.emoji_buddy.EmojiCodeSheet
  * Shayan Rais (http://shanraisshan.com)
  * created on 8/1/2016
  */
-enum class Activity private constructor(private val text: String) {
+enum class ActivityEmoji private constructor(public val text: String) {
 
     //Row#: 1
     SOCCER_BALL("⚽"), //https://www.emojibase.com/emoji/26bd/soccerball
