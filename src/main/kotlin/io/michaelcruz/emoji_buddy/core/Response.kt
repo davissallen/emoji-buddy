@@ -1,4 +1,4 @@
-package io.michaelcruz.b1_http_server.core
+package io.michaelcruz.emoji_buddy.core
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

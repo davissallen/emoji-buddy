@@ -1,17 +1,16 @@
-package io.michaelcruz.b1_http_server.resources
+package io.michaelcruz.emoji_buddy.resources
 
 import javax.ws.rs.Path
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 import java.util.concurrent.atomic.AtomicLong
 import com.google.common.base.Optional
-import io.michaelcruz.b1_http_server.core.RedisManager
-import io.michaelcruz.b1_http_server.core.Response
+import io.michaelcruz.emoji_buddy.core.RedisManager
+import io.michaelcruz.emoji_buddy.core.Response
 import javax.ws.rs.GET
 import javax.ws.rs.POST
 import javax.ws.rs.QueryParam
 import javax.ws.rs.*
-import javax.ws.rs.WebApplicationException
 import javax.ws.rs.core.UriBuilder
 
 

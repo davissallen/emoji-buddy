@@ -1,9 +1,9 @@
-package io.michaelcruz.b1_http_server
+package io.michaelcruz.emoji_buddy
 
 import io.dropwizard.Application
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
-import io.michaelcruz.b1_http_server.resources.EmojiBuddyResource
+import io.michaelcruz.emoji_buddy.resources.EmojiBuddyResource
 import redis.clients.jedis.Jedis
 
 class EmojiBuddy() : Application<EmojiBuddyConfiguration>() {

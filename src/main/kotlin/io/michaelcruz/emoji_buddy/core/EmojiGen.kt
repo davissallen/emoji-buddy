@@ -1,4 +1,4 @@
-package io.michaelcruz.b1_http_server.core
+package io.michaelcruz.emoji_buddy.core
 
 import java.util.*
 
@@ -12,4 +12,9 @@ class EmojiGen {
                 .joinToString("")
         return emojiYeah
     }
+}
+
+fun main(args: Array<String>) {
+
+
 }

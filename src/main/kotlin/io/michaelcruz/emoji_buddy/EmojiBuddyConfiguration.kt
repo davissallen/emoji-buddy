@@ -1,4 +1,4 @@
-package io.michaelcruz.b1_http_server
+package io.michaelcruz.emoji_buddy
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import io.dropwizard.Configuration
