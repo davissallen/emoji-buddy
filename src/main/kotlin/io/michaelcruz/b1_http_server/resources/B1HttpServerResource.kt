@@ -11,6 +11,10 @@ import javax.ws.rs.GET
 import javax.ws.rs.POST
 import javax.ws.rs.QueryParam
 import javax.ws.rs.*
+import javax.ws.rs.WebApplicationException
+import javax.ws.rs.core.UriBuilder
+
+
 
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
@@ -21,14 +25,11 @@ class B1HttpServerResource(val template: String, val defaultName: String) {
 
     @GET
     @Path("/{short}")
-    fun fetchUrl(@PathParam("short") short: String): Response {
+    fun redirectUrl(@PathParam("short") short: String): javax.ws.rs.core.Response {
 
         val redirectUrl = redis.getUrl(short).toString()
-        return Response(
-                id = counter.incrementAndGet(),
-                url = redirectUrl
-        )
-
+        val uri2 = UriBuilder.fromUri(redirectUrl).build()
+        return javax.ws.rs.core.Response.temporaryRedirect(uri2).build()
     }
 
 
@@ -37,9 +38,12 @@ class B1HttpServerResource(val template: String, val defaultName: String) {
     fun fetchUrl(@QueryParam("url") url: Optional<String>): Response {
 
         val randomString = redis.setUrl(url.get())
+        val redirectUrl = redis.getUrl(randomString.toString()).toString()
+
         return Response(
                 id = counter.incrementAndGet(),
-                url = "http://localhost:8080/" + randomString
+                url = "http://localhost:8080/" + randomString,
+                redirectUrl = redirectUrl
         )
 
     }
