@@ -14,11 +14,11 @@ class RedisManager {
 
     // build random string generator
     fun setUrl(url: String) : String? {
-        val randomString: String = EmojiGen().getEmojis()
-        val shortUrl: String = "short." + randomString
-        redis.hset(shortUrl, "url", url)
-        redis.hset(shortUrl, "date", Date().toString())
-        return randomString
+        val uniqueString: String = UrlGen().createUniqueString()
+        val key: String = "short." + uniqueString
+        redis.hset(key, "url", url)
+        redis.hset(key, "date", Date().toString())
+        return uniqueString
     }
 }
 

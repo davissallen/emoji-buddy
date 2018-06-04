@@ -36,12 +36,12 @@ class EmojiBuddyResource(val template: String, val defaultName: String) {
     @Path("/fetchurl")
     fun fetchUrl(@QueryParam("url") url: Optional<String>): Response {
 
-        val randomString = redis.setUrl(url.get())
-        val redirectUrl = redis.getUrl(randomString.toString()).toString()
+        val uniqueString = redis.setUrl(url.get())
+        val redirectUrl = redis.getUrl(uniqueString.toString()).toString()
 
         return Response(
                 id = counter.incrementAndGet(),
-                url = "http://localhost:8080/" + randomString,
+                url = "http://localhost:8080/" + uniqueString,
                 redirectUrl = redirectUrl
         )
 

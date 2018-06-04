@@ -43,7 +43,7 @@ class EmojiGen {
             emojiStore.add(it.text)
         }
     }
-    // idiomatic way to generate a random alphanumeric string in Kotlin
+    // idiomatic way to generate a random string in Kotlin
     fun getEmojis() : String {
         buildEmojiList()
         val emojiYeah: String = Random().ints(5, 0, emojiStore.size)
