@@ -5,7 +5,6 @@ import java.util.*
 import java.util.Objects
 
 class EmojiGen {
-//    val emojiStore: ArrayList<String> = arrayListOf("💩", "👍", "🎉", "\uD83D\uDE0A", "\uD83D\uDE0E", "\uD83D\uDE00", "❤️", "\uD83D\uDE0D", "\uD83D\uDE02" )
     val emojiStore : MutableList<String> = arrayListOf()
 
     val activities = enumValues<ActivityEmoji>()

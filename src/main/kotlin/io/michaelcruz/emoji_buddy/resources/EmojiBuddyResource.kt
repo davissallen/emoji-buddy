@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicLong
 import com.google.common.base.Optional
 import io.michaelcruz.emoji_buddy.core.RedisManager
 import io.michaelcruz.emoji_buddy.core.Response
+import org.glassfish.jersey.server.Uri
+import java.net.URI
 import javax.ws.rs.GET
 import javax.ws.rs.POST
 import javax.ws.rs.QueryParam
@@ -34,9 +36,9 @@ class EmojiBuddyResource(val template: String, val defaultName: String) {
 
     @POST
     @Path("/fetchurl")
-    fun fetchUrl(@QueryParam("url") url: Optional<String>): Response {
+    fun fetchUrl(@QueryParam("url") url: Optional<URI>): Response {
 
-        val uniqueString = redis.setUrl(url.get())
+        val uniqueString = redis.setUrl(url.get().toString())
         val redirectUrl = redis.getUrl(uniqueString.toString()).toString()
 
         return Response(
