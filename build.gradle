@@ -14,7 +14,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin'
 apply plugin: 'application'
-mainClassName = "io.michaelcruz.emoji_buddy.B1HttpServer"
+mainClassName = "io.michaelcruz.emoji_buddy.EmojiBuddy"
 
 repositories {
     mavenCentral()
