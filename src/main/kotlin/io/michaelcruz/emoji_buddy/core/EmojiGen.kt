@@ -46,7 +46,7 @@ class EmojiGen {
     // idiomatic way to generate a random string in Kotlin
     fun getEmojis() : String {
         buildEmojiList()
-        val emojiYeah: String = Random().ints(5, 0, emojiStore.size)
+        val emojiYeah: String = Random().ints(3, 0, emojiStore.size)
                 .mapToObj { emojiStore.get(it) }
                 .toArray()
                 .joinToString("")
