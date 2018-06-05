@@ -23,6 +23,7 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compile 'io.dropwizard:dropwizard-core:0.9.2'
+    compile group: 'io.dropwizard', name: 'dropwizard-assets', version: '0.7.0-rc1'
     compile 'redis.clients:jedis:2.9.0'
 }
 

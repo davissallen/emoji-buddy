@@ -1,6 +1,7 @@
 package io.michaelcruz.emoji_buddy
 
 import io.dropwizard.Application
+import io.dropwizard.assets.AssetsBundle
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
 import io.michaelcruz.emoji_buddy.resources.EmojiBuddyResource
@@ -19,8 +20,10 @@ class EmojiBuddy() : Application<EmojiBuddyConfiguration>() {
     }
 
     override fun initialize(bootstrap: Bootstrap<EmojiBuddyConfiguration>) {
-        // Don't do anything
+        bootstrap.addBundle( AssetsBundle("/assets", "/hi", "index.html", "static"));
     }
+
+
 
     override fun run(config: EmojiBuddyConfiguration, env: Environment) {
         val resource =  EmojiBuddyResource(config.template, config.defaultName)
