@@ -20,7 +20,7 @@ class EmojiBuddy() : Application<EmojiBuddyConfiguration>() {
     }
 
     override fun initialize(bootstrap: Bootstrap<EmojiBuddyConfiguration>) {
-        bootstrap.addBundle( AssetsBundle("/assets", "/" + "\uD83D\uDE0E", "index.html", "static"));
+        bootstrap.addBundle( AssetsBundle("/assets", "/hi/hello", "index.html", "static"));
     }
 
 

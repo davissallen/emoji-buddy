@@ -22,15 +22,19 @@ import javax.ws.rs.core.UriBuilder
 class EmojiBuddyResource(val template: String, val defaultName: String) {
     var counter = AtomicLong()
     val redis = RedisManager()
-
+    val alert: Throwable = Throwable()
 
     @GET
     @Path("/{short}")
     fun redirectUrl(@PathParam("short") short: String): javax.ws.rs.core.Response {
 
-        val redirectUrl = redis.getUrl(short).toString()
-        val uri2 = UriBuilder.fromUri(redirectUrl).build()
-        return javax.ws.rs.core.Response.temporaryRedirect(uri2).build()
+        if (short != "hi") {
+            val redirectUrl = redis.getUrl(short).toString()
+            val uri2 = UriBuilder.fromUri(redirectUrl).build()
+            return javax.ws.rs.core.Response.temporaryRedirect(uri2).build()
+        } else {
+            throw alert
+        }
     }
 
 
