@@ -43,7 +43,7 @@ class EmojiBuddyResource(val template: String, val defaultName: String) {
 
         return Response(
                 id = counter.incrementAndGet(),
-                url = "http://localhost:8080/" + uniqueString,
+                url = "http://1jo.me/" + uniqueString,
                 redirectUrl = redirectUrl
         )
 
