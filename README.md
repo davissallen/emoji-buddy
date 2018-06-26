@@ -19,9 +19,6 @@ Here is a url shortner that makes your contracted urls fun.
 #### Technologies Used
 
 [![Kotlin](https://img.shields.io/badge/built%20with-kotlin-blue.svg?longCache=true&style=flat-square)](https://kotlinlang.org/)
-
 [![Redis](https://img.shields.io/badge/storage%20by-redis-red.svg?longCache=true&style=flat-square)](https://redis.io/)
-
 [![Dropwizard](https://img.shields.io/badge/API%20framework-dropwizard-yellow.svg?longCache=true&style=flat-square)](https://www.dropwizard.io/)
-
 [![Gradle](https://img.shields.io/badge/build%20tool-gradle-green.svg?longCache=true&style=flat-square)](https://gradle.org/)
